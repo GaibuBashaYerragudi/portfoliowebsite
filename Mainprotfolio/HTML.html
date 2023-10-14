@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang ='en'>
+    <head>
+        <meta charset =" UTF -8">
+        <meta http-equiv="X-UA-compatible" content="IE-edge">
+        <meta name="viewport" content ="width-device-width,initial-scale-1.0">
+        <title>Portfolio </title>
+        <link rel ="stylesheet"  href="CSS.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        <script src="https://kit.fontawesome.com/92fdbbe29e.js" crossorigin="anonymous"></script>
+    </head>
+    <h1 >Portfolio</h1>
+    <body>
+      <div id="header">
+        <div class="container">
+          <nav>
+            <img src="Basha-designstyle-balance-l.png" class="logo">
+           <ul id="sidemenu">
+                <li> <a href="#header">Home</a></li>
+                <li> <a href="#about">About</a></li>
+                <li> <a href="#services">Services</a></li>
+                <li> <a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+           </ul>
+           <i class="fa-solid fa-bars "  onclick="openmenu()"></i>
+          </nav>
+          <div class="header-text">
+            <h4>Hello, How are You ?</h4>
+            <h3>It's Me <span>Gaibu Basha </span><br>From India</h3>
+            <p>Iam a Full Stack Java developer  <br>and I have Knowerdge on Backend <br> Python,C
+           languages </p> 
+          </div>
+        </div>
+       </div>
+  <div id="about">
+    <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src ="Style1.jpg">
+           <div class="about-col-2" d-flex justify-content-center > <h1 class="sub-title">About Me</h1>
+          <p>Iam A B.tech Graduate recently 2023 passout specilized in Electronic and Communiation
+             Engineering But I'M Interset on Computer Scince Knowlerge So I want a become
+             Full Stack devloper and I have done Training on Naresh It In Hyd. </p></div>
+          
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('Skills')" >Skills</p>
+            <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+            <p class="tab-links"onclick="opentab('Education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="Skills">
+            <ul>
+              <li><span>Full Stack Java</span><br>Create Logics/Implement new way Logics</li>
+              <li><span>web devlopment</span><br> web  App Devlopment</li>
+              <li><span>Backend</span><br>Python,C Languge </li>
+              <li><span>Database</span><br>Sql,Oracle(Pl/Sql)</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="Experience">
+            <ul>
+              <li><span>2023-Major Project </span><br> All optic n bit multiplier using VLSI</li>
+              <li><span>Mini -Project</span><br> Portfolio</li>
+              <li><span>Mini -Project</span><br>Student Enrollment using files in C Languge </li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="Education">
+            <ul>
+              <li><span>2023 - B.tech</span><br>Specilized in Electronic and Communication</li>
+              <li><span>2019- Intermediate </span><br> Govt Junior College</li>
+              <li><span>2017-SSC</span><br>Z.P.High School </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+    </div>
+  </div>
+  <!----------Services----------->
+  <div id="services">
+    <div class="container">
+      <h1 class="sub-title">My Services</h1>
+      <div class="service-list">
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>web Devlopment</h2>
+          <p> Iam a web site interface and  developer 
+             like style and attractive designing </p>
+          <a href="#">learn more</a>
+        </div>
+        <div>
+          <i class="fa-brands fa-python"></i>
+          <h2>Backend devlopment</h2>
+          <p> crate a logic  and  developer  like optimizing  and less complexity</p>
+          <a href="#">learn more</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-database"></i>
+          <h2>AWS /Sql</h2>
+          <p> Colud storage data  and  Sql developer  like Storing and Maintaining data</p>
+          <a href="#">learn more</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-----------Contant---------->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i> contct@exmple.com</p>
+          <p><i class="fa-solid fa-phone"></i> 0123456789</p>
+          <div class="social-icons">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href=""><i class="fa-brands fa-hackerrank"></i></a>
+          </div>
+          <a href="resume.pdf" download class="btn btn2">Download CV</a>
+      </div>
+        <div class="contact-right">
+          <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" cols="30" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2">submit</button>
+        </form>
+        <span id="msg">Basha</span>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p> copyright @ Basha .Made with <i class="fa-solid fa-heart"></i> by Gaibu Basha</p>
+    </div>
+  </div>
+  <script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+
+   function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+   }
+  </script>
+  <script>
+    var sidemenu =document.getElementById("sidemenu");
+
+    function openmenu(){
+      sidemenu.style.right ="0";
+    }
+    function closemenu(){
+      sidemenu.style.right ="-200px";
+    }
+  </script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw1pP-9_kRDWTsCr8ILpmmidYiLFCzgh5LTJMlWmb3R7xsonTI4HZK_A3VsXWUrAzsR/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg =document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response =>{
+        msg.innerHTML ="Message Sent Succesfully"
+        setTimeout(function(){
+          msg.innerHTML=""
+        }, 5000);
+        form.reset()
+      })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+    </body>
+    
+      
+</html>
